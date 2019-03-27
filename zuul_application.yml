@@ -11,13 +11,6 @@ spring:
   application:
     name: HUASHANG-ZUUL-GATEWAY
     profile: dev
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:7001/eureka
-  instance:
-    instance-id: gateway-9527 #显示的名字而已
-    prefer-ip-address: true
 zuul:
   routes:
     plat.serviceId: plat-service
@@ -33,13 +26,6 @@ spring:
   application:
     name: HUASHANG-ZUUL-GATEWAY
     profile: test
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:7001/eureka
-  instance:
-    instance-id: gateway-9527 #显示的名字而已
-    prefer-ip-address: true
 zuul:
   routes:
     plat.serviceId: plat-service
