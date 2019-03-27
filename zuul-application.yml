@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active:
+      - dev
+
+---
+
+server:
+  port: 9527
+spring:
+  application:
+    name: HUASHANG-ZUUL-GATEWAY
+    profiles: dev
+
+---
+
+server:
+  port: 9528
+spring:
+  application:
+    name: HUASHANG-ZUUL-GATEWAY
+    profiles: test
+
