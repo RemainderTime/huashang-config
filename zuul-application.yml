@@ -11,6 +11,21 @@ spring:
   application:
     name: HUASHANG-ZUUL-GATEWAY
   profiles: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka  #告诉服务提供者要把服务注册到哪儿 #单机环境
+  instance:
+    prefer-ip-address: true #显示客户端真实ip
+    instance-id: gateway-9527
+zuul:
+  routes:
+    plat.serviceId: plat-service
+    plat.path: /plat/**
+    product.serviceId: product-service
+    product.path: /product/**
+    ignored-services: "*" # 安全加固：忽略这个服务，如果要忽略所有的服务， “*”
+    prefix: "/huashang"  # 统一前缀
 
 
 ---
@@ -21,5 +36,20 @@ spring:
   application:
     name: HUASHANG-ZUUL-GATEWAY
   profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka  #告诉服务提供者要把服务注册到哪儿 #单机环境
+  instance:
+    prefer-ip-address: true #显示客户端真实ip
+    instance-id: gateway-9527
+zuul:
+  routes:
+    plat.serviceId: plat-service
+    plat.path: /plat/**
+    product.serviceId: product-service
+    product.path: /product/**
+    ignored-services: "*" # 安全加固：忽略这个服务，如果要忽略所有的服务， “*”
+    prefix: "/huashang"  # 统一前缀
 
 
