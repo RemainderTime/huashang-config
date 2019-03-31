@@ -18,6 +18,14 @@ eureka:
   instance:
     prefer-ip-address: true #显示客户端真实ip
     instance-id: gateway-9527
+zuul:
+  prefix: "/huashang"
+  ignored-services: "*"
+  routes:
+    plat.serviceId: plat-service
+    plat.path: /plat/**
+	product.serviceId: product-service
+    product.path: /product/**
 
 
 ---
@@ -35,5 +43,12 @@ eureka:
   instance:
     prefer-ip-address: true #显示客户端真实ip
     instance-id: gateway-9527
-
+zuul:
+  prefix: "/huashang"
+  ignored-services: "*"
+  routes:
+    plat.serviceId: plat-service
+    plat.path: /plat/**
+	product.serviceId: product-service
+    product.path: /product/**
 
