@@ -26,7 +26,13 @@ zuul:
     product.path: /product/**
     plat.serviceId: plat-service
     plat.path: /plat/**
+<<<<<<< HEAD
 	
+=======
+    product.serviceId: product-service
+    product.path: /product/**
+
+>>>>>>> 55b8ff94d32067576912922c0d84a78ce9593b76
 
 ---
 
