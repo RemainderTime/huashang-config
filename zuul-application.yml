@@ -28,7 +28,6 @@ zuul:
     plat.path: /plat/**
 	
 
-
 ---
 
 server:
