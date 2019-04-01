@@ -26,6 +26,8 @@ zuul:
     product.path: /product/**
     plat.serviceId: plat-service
     plat.path: /plat/**
+    common.serviceId: common-service
+    common.path: /common/**
 
 ---
 
@@ -46,10 +48,10 @@ zuul:
   prefix: "/huashang"
   ignored-services: "*"
   routes:
-    plat.serviceId: plat-service
-    plat.path: /plat/**
     product.serviceId: product-service
     product.path: /product/**
+    plat.serviceId: plat-service
+    plat.path: /plat/**
+    common.serviceId: common-service
+    common.path: /common/**
 
-0.
-00//85
